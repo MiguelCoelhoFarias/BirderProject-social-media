@@ -2,7 +2,7 @@
 
 Birder é uma plataforma de mídia social inspirada no Twitter, projetada para permitir que os usuários compartilhem fotos e socializem com outros entusiastas. Desenvolvida utilizando as tecnologias MongoDB, Express.js, React e Node.js (MERN stack), o Birder oferece uma experiência interativa e envolvente para os amantes de fotografias.
 
-## Funcionalidades Principais
+## Principais funcionalidades
 Compartilhamento de Fotos: Publique suas fotos favoritas para que outros usuários possam apreciá-las e interagir.
 
 Feed Personalizado: Personalize seu feed de acordo com suas preferências, seguindo outros usuários e recebendo atualizações de suas postagens.
