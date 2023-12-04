@@ -14,7 +14,7 @@ Exploração de Conteúdo: Descubra novas fotos e perfis interessantes por meio 
 ## Tecnologias Utilizadas
 O Birder foi desenvolvido utilizando a stack MERN (MongoDB, Express.js, React e Node.js), proporcionando uma base sólida e eficiente para a construção de uma aplicação web moderna e escalável.
 
-# ROTAS 
+# ROTAS (BACKEND)
 CREATE USER
 ```
 POST http://localhost:3001/auth/register
@@ -116,4 +116,11 @@ or
   "action": "remove"
 }
 ```
+# FRONTEND
+
+Desenvolvi um frontEnd com React. Nele organizei a estrutura usando componentes e widgtes para melhor organização e reaproveitamento de códigos.
+Fiz uso do multer para trabalhar com imagens e jogar no banco de dados. 
+Conexão com o backend com endpoints e salvando tudo no mongoDB.
+Save de usuario em local Storage.
+Estilização inspirada em redes sociais ja existentes.
 
