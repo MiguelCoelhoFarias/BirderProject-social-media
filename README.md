@@ -14,4 +14,106 @@ Exploração de Conteúdo: Descubra novas fotos e perfis interessantes por meio 
 ## Tecnologias Utilizadas
 O Birder foi desenvolvido utilizando a stack MERN (MongoDB, Express.js, React e Node.js), proporcionando uma base sólida e eficiente para a construção de uma aplicação web moderna e escalável.
 
+# ROTAS 
+CREATE USER
+```
+POST http://localhost:3001/auth/register
+
+Ex: Body - Raw - JSON
+{
+    "firstName": "exemplo",
+    "lastName": "teste",
+    "email": "exemploteste@email.com",
+    "password": "123456",
+    "picturePath": "p6.jpeg",
+    "friends": [],
+    "location": "Cidade",
+    "occupation": "Profissao"
+}
+```
+LOGIN USER
+```
+POST http://localhost:3001/auth/login
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: Body - Raw - JSON
+{
+    "email": "exemploteste@email.com",
+    "password": "123456"
+}
+```
+CREATE POST
+```
+POST http://localhost:3001/posts/<userId>/post
+obs: substitua <userId> pelo Id do usuário desejado para realizar novo post
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: Body - Raw - JSON
+{
+    "picturePath": "p6.jpeg",
+    "description":"testeNovo"
+}
+```
+GET POSTS
+```
+GET http://localhost:3001/posts
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: None
+```
+GET USER POSTS
+```
+GET http://localhost:3001/posts/<userId>/posts
+obs: substitua <userId> pelo Id do usuário desejado para realizar novo post
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: None
+```
+DELETE POSTS
+```
+DELETE http://localhost:3001/posts/<postId>
+obs: substitua <postId> pelo Id desejado para deletar post
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: None
+```
+GET USER
+```
+GET http://localhost:3001/users/<userId>
+obs: substitua <userId> pelo Id do usuário desejado para realizar novo post
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: None
+```
+GET USER FRIENDS
+```
+GET http://localhost:3001/users/<userId>/friends
+obs: substitua <userId> pelo Id do usuário desejado para realizar novo post
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: None
+```
+ADD & REMOVE FRIENDS
+```
+PATCH http://localhost:3001/users/<userId>/<friendId>
+obs: substitua <userId> pelo Id do usuário desejado para realizar novo post e <friendId> pelo Id do usuário que deseja adicionar como amigo
+
+obs: insira o token gerado no registro dentro de 'Authorization' 'type: Bearer token' no Postman
+
+Ex: Body - Raw - JSON
+{
+  "action": "add"
+}
+or
+{
+  "action": "remove"
+}
+```
 
